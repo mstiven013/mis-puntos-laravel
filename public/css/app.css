@@ -47,6 +47,7 @@ html, body {
     flex-flow: row nowrap;
     justify-content: center;
     list-style: none;
+    margin: 0px;
 }
     .nav .hmenu li {
         position: relative;
@@ -79,6 +80,7 @@ html, body {
     flex-flow: row nowrap;
     justify-content: center;
     list-style: none;
+    margin: 0px;
 }
     .auth-menu ul li {
         padding-left: 10px;

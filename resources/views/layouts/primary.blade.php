@@ -5,8 +5,11 @@
 	<title>@yield('title')</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-	@yield('styles')
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+	<!--BOOTSTRAP STYLES-->
+	<link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
+	@yield('styles')
+
 </head>
 <body>
 
@@ -41,6 +44,11 @@
 	</header>
 
 	@yield('content')
+	
+	<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+	<script src="{{ asset('libs/bootstrap/js/popper.min.js') }}"></script>
+	<script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+	@yield('scripts')
 	
 </body>
 </html>
