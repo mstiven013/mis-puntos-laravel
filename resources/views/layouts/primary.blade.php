@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-	<!--BOOTSTRAP STYLES-->
+	<!--MATERIALIZE STYLES-->
 	<link rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('libs/icomoon/icomoon.css') }}">
 	@yield('styles')
 
 </head>
@@ -45,6 +46,9 @@
 	<!-- Modal Structure -->
 	<div id="authmodal" class="modal">
 		<div class="modal-content">
+			<a href="#!" class="modal-close">
+				<span class="icon-close"></span>
+			</a>
 
 			<form action="">
 				<div class="form-group logo">
@@ -59,6 +63,7 @@
 					<select class="center-align" name="document-type" id="document-type">
 						<option value="CEDULA_CIUDADANIA" selected>Cédula de ciudadanía</option>
 						<option value="CEDULA_EXTRANJERIA">Cédula de extranjería</option>
+						<option value="PASAPORTE">Pasaporte</option>
 						<option value="NIT">NIT</option>
 					</select>
 				</div>
