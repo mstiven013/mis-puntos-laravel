@@ -32,6 +32,13 @@ html, body {
     width: 100%;
     z-index: 1000;
 }
+    .header nav {
+        background-color: transparent;
+        box-shadow: none;
+        height: auto;
+        line-height: normal;
+        width: auto;
+    }
 
 /*Navigation menu styles*/
 .nav {
@@ -39,39 +46,38 @@ html, body {
     left: 50%;
     top: 0px;
     transform: translateX(-50%);
-    width: auto;
 }
-.nav .hmenu {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    list-style: none;
-    margin: 0px;
-}
-    .nav .hmenu li {
-        position: relative;
+    .nav .hmenu {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0px;
     }
-        .nav .hmenu li a {
-            color: #616161;
-            border-bottom: 0px solid #fff;
-            display: block;
-            font-size: 14px;
-            font-weight: 400;
-            height: 65px;
-            line-height: 65px;
-            padding: 0px 15px;
-            text-decoration: none;
-            transition: all 0.4s ease;
+        .nav .hmenu li {
+            position: relative;
         }
-            
-            .nav .hmenu li:hover a,
-            .nav .hmenu li a:hover,
-            .nav .hmenu li a:active {
-                background-color: #386bad;
-                border-bottom-width: 3px;
-                color: #fff;
+            .nav .hmenu li a {
+                color: #616161;
+                border-bottom: 0px solid #fff;
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                height: 65px;
+                line-height: 65px;
+                padding: 0px 15px;
+                text-decoration: none;
+                transition: all 0.4s ease;
             }
+                
+                .nav .hmenu li:hover a,
+                .nav .hmenu li a:hover,
+                .nav .hmenu li a:active {
+                    background-color: #386bad;
+                    border-bottom-width: 3px;
+                    color: #fff;
+                }
 
 /*Authentication menu styles*/
 .auth-menu ul {
@@ -91,10 +97,129 @@ html, body {
             padding-right: 0px;
         }
             .auth-menu ul li a {
+                background-color: #386bad;
+                border-radius: 30px;
                 display: block;
-                color: #000;
+                color: #fff;
+                cursor: pointer;
                 font-size: 14px;
-                font-weight: 400;
-                padding: 0px 0px;
+                font-weight: 700;
+                padding: 10px 20px;
                 text-decoration: none;
             }
+            .auth-menu ul li a:hover,
+            .auth-menu ul li a:active {
+                background-color: #5a38ad;
+            }
+
+/*Authentication modal*/
+#authmodal {
+    border-radius: 20px;
+    max-height: 90%;
+    height: 90%;
+    text-align: center;
+    top: 5% !important;
+    width: 450px;
+}
+    #authmodal .modal-content {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        justify-content: center;
+        padding: 50px;
+    }
+        #authmodal .instruction {
+            color: #616161;
+            font-size: 16px;
+        }
+
+        #authmodal .logo {
+            margin-bottom: 40px;
+        }
+            #authmodal .logo img {
+               max-height: 100px;
+            }
+
+        #authmodal .select-wrapper input.select-dropdown {
+            text-align: center;
+        }
+        #authmodal .select-wrapper .dropdown-content {
+            top: 100% !important;
+            width: 100% !important;
+        }
+            #authmodal .select-wrapper .dropdown-content li {
+                text-align: center;
+            }
+                #authmodal .select-wrapper .dropdown-content li > a, 
+                #authmodal .select-wrapper .dropdown-content li > span {
+                    color: #616161;
+                }
+                    #authmodal .select-wrapper .select-dropdown.dropdown-content li.selected {
+                        background-color: #5a38ad;
+                    }
+                        #authmodal .select-wrapper .select-dropdown.dropdown-content li.selected > a, 
+                        #authmodal .select-wrapper .select-dropdown.dropdown-content li.selected > span {
+                            color: #fff;
+                        }
+
+        #authmodal input[type="text"],
+        #authmodal input[type="password"],
+        #authmodal input[type="email"] {
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+            #authmodal input[type="text"]:focus,
+            #authmodal input[type="password"]:focus,
+            #authmodal input[type="email"]:focus,
+            #authmodal input[type="text"]:active,
+            #authmodal input[type="password"]:active,
+            #authmodal input[type="email"]:active {
+                border-color: #5a38ad;
+                box-shadow: none;
+            }
+
+        #authmodal .button {
+            border-radius: 30px;
+            margin-top: 5px;
+            width: 100%;
+        }
+            #authmodal .button input {
+                cursor: pointer;
+                color: #fff;
+                font-family: 'Montserrat';
+                font-weight: 700;
+                outline: 0;
+            }
+
+        #authmodal .need-help {
+            margin-top: 40px;
+        }
+
+/*Global buttons*/
+.button {
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    outline: 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+    .button.primary {
+        background-color: #386bad;
+        color: #fff;
+    }
+        .button.primary:hover,
+        .button.primary:active {
+            background-color: #5a38ad;
+            color: #fff;
+        }

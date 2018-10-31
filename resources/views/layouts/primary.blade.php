@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<!--BOOTSTRAP STYLES-->
-	<link rel="stylesheet" href="{{ asset('libs/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('libs/materialize/css/materialize.min.css') }}">
 	@yield('styles')
 
 </head>
@@ -21,33 +21,70 @@
 		<nav class="nav">
 			<ul class="hmenu">
 				<li>
-					<a href="#">Inicio</a>
+					<a class="waves-effect waves-light" href="#">Inicio</a>
 				</li>
 				<li>
-					<a href="#">Aliados</a>
+					<a class="waves-effect waves-light" href="#">Aliados</a>
 				</li>
 				<li>
-					<a href="#">Viajes</a>
+					<a class="waves-effect waves-light" href="#">Viajes</a>
 				</li>
 				<li>
-					<a href="#">Bonos</a>
+					<a class="waves-effect waves-light" href="#">Bonos</a>
 				</li>
 			</ul>
 		</nav>
 
 		<nav class="auth-menu">
 			<ul>
-				<li><a href="#">Iniciar sesión / Registrarse</a></li>
-				<li><a href="#"></a></li>
+				<li><a class="waves-effect waves-light modal-trigger" href="#authmodal">Iniciar sesión / Registrarse</a></li>
 			</ul>
 		</nav>
 	</header>
 
+	<!-- Modal Structure -->
+	<div id="authmodal" class="modal">
+		<div class="modal-content">
+
+			<form action="">
+				<div class="form-group logo">
+					<img src="https://www.webussines.com/wp-content/themes/WeBussines/images/logo.png" alt="">
+				</div>
+
+				<div class="form-group instruction">
+					<p>Ingresa tu documento</p>
+				</div>
+
+				<div class="form-group input-field">
+					<select class="center-align" name="document-type" id="document-type">
+						<option value="CEDULA_CIUDADANIA" selected>Cédula de ciudadanía</option>
+						<option value="CEDULA_EXTRANJERIA">Cédula de extranjería</option>
+						<option value="NIT">NIT</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<input class="center-align" type="text" name="document" id="document" placeholder="Número de documento">
+				</div>
+
+				<div class="form-group">
+					<input class="waves-effect waves-light button primary" type="button" id="continue" value="Continuar">
+				</div>
+
+				<div class="form-group need-help">
+					<a href="#">¿Necesitas nuestra ayuda?</a>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+
 	@yield('content')
 	
 	<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-	<script src="{{ asset('libs/bootstrap/js/popper.min.js') }}"></script>
-	<script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>
+	<script src="{{ asset('js/common.js') }}"></script>
 	@yield('scripts')
 	
 </body>
