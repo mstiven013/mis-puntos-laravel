@@ -44,52 +44,25 @@
 	</header>
 
 	<!-- Modal Structure -->
-	<div id="authmodal" class="modal">
+	<div id="authmodal" class="modal" action="/registro" method="POST">
 		<div class="modal-content">
 			<a href="#!" class="modal-close">
 				<span class="icon-close"></span>
 			</a>
 
-			<form action="">
-				<div class="form-group logo">
-					<img src="https://www.webussines.com/wp-content/themes/WeBussines/images/logo.png" alt="">
-				</div>
-
-				<div class="form-group instruction">
-					<p>Ingresa tu documento</p>
-				</div>
-
-				<div class="form-group input-field">
-					<select class="center-align" name="document-type" id="document-type">
-						<option value="CEDULA_CIUDADANIA" selected>Cédula de ciudadanía</option>
-						<option value="CEDULA_EXTRANJERIA">Cédula de extranjería</option>
-						<option value="PASAPORTE">Pasaporte</option>
-						<option value="NIT">NIT</option>
-					</select>
-				</div>
-
-				<div class="form-group">
-					<input class="center-align" type="text" name="document" id="document" placeholder="Número de documento">
-				</div>
-
-				<div class="form-group">
-					<input class="waves-effect waves-light button primary" type="button" id="continue" value="Continuar">
-				</div>
-
-				<div class="form-group need-help">
-					<a href="#">¿Necesitas nuestra ayuda?</a>
-				</div>
-
-			</form>
+			@include('forms.auth-form')
 
 		</div>
 	</div>
 
-	@yield('content')
+	<div class="content">
+		@yield('content')
+	</div>
 	
 	<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 	<script src="{{ asset('libs/materialize/js/materialize.min.js') }}"></script>
 	<script src="{{ asset('js/common.js') }}"></script>
+	<script src="{{ asset('js/auth-form.js') }}"></script>
 	@yield('scripts')
 	
 </body>

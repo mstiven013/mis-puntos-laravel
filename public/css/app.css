@@ -200,17 +200,42 @@ html, body {
             margin-top: 5px;
             width: 100%;
         }
-            #authmodal .button input {
+            #authmodal i.button {
+                padding: 0;
+            }
+            #authmodal i.button input {
                 cursor: pointer;
                 color: #fff;
                 font-family: 'Montserrat';
                 font-weight: 700;
+                padding: 13px 20px;
                 outline: 0;
+                width: 100%;
             }
 
         #authmodal .need-help {
             margin-top: 40px;
         }
+
+        #authmodal .error {
+            display: none;
+        }
+            #authmodal .error.show {
+                display: block;
+            }
+
+        #authmodal #register-step {
+            color: #616161;
+            display: none;
+        }
+            #authmodal #register-step strong {
+                font-weight: bold;
+            }
+
+/*Global forms*/
+.error {
+    color: red;
+}
 
 /*Global buttons*/
 .button {
@@ -237,3 +262,8 @@ html, body {
             background-color: #5a38ad;
             color: #fff;
         }
+
+/*Content container*/
+.content {
+    margin-top: 65px;
+}

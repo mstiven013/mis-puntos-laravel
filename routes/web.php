@@ -11,6 +11,15 @@
 |
 */
 
+//Home route
 Route::get('/', function () {
     return view('home');
 });
+
+//Register route
+Route::post('/registro', 'HomeController@register');
+
+//Auth::routes();
+Route::get('/cuenta', 'HomeController@index')->name('home');
+
+
