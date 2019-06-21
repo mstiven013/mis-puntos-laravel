@@ -1,0 +1,40 @@
+@mixin box-sizing($prop) {
+    -webkit-box-sizing: $prop;
+    -moz-box-sizing: $prop;
+    -ms-box-sizing: $prop;
+    box-sizing: $prop;
+}
+
+@mixin transition($prop...) {
+  -webkit-transition: $prop;
+  -o-transition: $prop;
+  transition: $prop;
+}
+
+@mixin transform($prop...) {
+  -webkit-transform: $prop;
+  -o-transform: $prop;
+  transform: $prop;
+}
+
+@mixin calc-height($prop) {
+  height: -webkit-calc( #{$prop} );
+  height: -moz-calc( #{$prop} );
+  height: -ms-calc( #{$prop} );
+  height: calc( #{$prop} );
+}
+
+@mixin calc-width($prop) {
+  width: -webkit-calc( $prop );
+  width: -moz-calc( $prop );
+  width: -ms-calc( $prop );
+  width: calc( $prop );
+}
+
+@mixin max-width($prop) {
+  max-width: -webkit-calc( $prop );
+  max-width: -moz-calc( $prop );
+  max-width: -ms-calc( $prop );
+  max-width: -o-calc( $prop );
+  max-width: calc( $prop );
+}

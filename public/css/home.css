@@ -1,0 +1,141 @@
+.home-banner {
+  background-image: url("/img/bgs/blue-curve-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -ms-calc( 100vh - 65px);
+  height: calc( 100vh - 65px);
+  text-align: center;
+  width: 100%;
+}
+
+.home-banner .title {
+  font-size: 65px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.home-banner .links a {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.home-banner .seo {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 2.5%;
+  margin: 0px auto;
+  position: absolute;
+  width: 95%;
+}
+
+.home-banner .seo h1 {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+.register-page {
+  background-image: url("/img/bgs/blue-points-bg-01.jpg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 70px 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.register-page .title {
+  margin-bottom: 25px;
+}
+
+.register-page .register-form {
+  width: 50%;
+}
+
+.register-page .register-form .row {
+  margin-bottom: 0px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 0px;
+}
+
+.register-page .register-form label {
+  color: #cccccc;
+}
+
+.register-page .register-form input[type="text"],
+.register-page .register-form input[type="password"],
+.register-page .register-form input[type="email"],
+.register-page .register-form input[type="date"] {
+  color: #ffffff;
+}
+
+.register-page .register-form input[type="text"]:focus,
+.register-page .register-form input[type="password"]:focus,
+.register-page .register-form input[type="email"]:focus,
+.register-page .register-form input[type="date"]:focus {
+  border-color: #ffffff;
+  -webkit-box-shadow: 0 0px 0 0 #ffffff;
+          box-shadow: 0 0px 0 0 #ffffff;
+}
+
+.register-page .register-form input[type="text"]:focus + label,
+.register-page .register-form input[type="password"]:focus + label,
+.register-page .register-form input[type="email"]:focus + label,
+.register-page .register-form input[type="date"]:focus + label {
+  color: #cccccc;
+}
+
+.register-page .register-form i.button,
+.register-page .register-form i.button input {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+

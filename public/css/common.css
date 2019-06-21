@@ -1,0 +1,404 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0px;
+}
+
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  color: #616161;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  height: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  left: 0px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header nav {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: auto;
+  line-height: normal;
+  width: auto;
+}
+
+.header .logo h2 {
+  color: #386bad;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+/*Navigation menu styles*/
+
+.header .nav {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: auto;
+}
+
+.header .nav .hmenu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0px;
+}
+
+.header .nav .hmenu li {
+  position: relative;
+}
+
+.header .nav .hmenu li a {
+  color: #616161;
+  border-bottom: 0px solid #ffffff;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  height: 65px;
+  line-height: 65px;
+  padding: 0px 15px;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header .nav .hmenu li:hover a,
+.header .nav .hmenu li a:hover,
+.header .nav .hmenu li a:active {
+  background-color: #386bad;
+  border-bottom-width: 3px;
+  color: #ffffff;
+}
+
+/*Authentication menu styles*/
+
+.auth-menu {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: auto;
+  width: auto;
+}
+
+.auth-menu ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  margin: 0px;
+  width: auto;
+}
+
+.auth-menu ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.auth-menu ul li:last-child {
+  padding-right: 0px;
+}
+
+.auth-menu ul li a {
+  background-color: #386bad;
+  border-radius: 30px;
+  display: block;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.auth-menu ul li a:hover,
+.auth-menu ul li a:active {
+  background-color: #5a38ad;
+}
+
+/*Authentication modal*/
+
+#authmodal {
+  border-radius: 20px;
+  max-height: 90%;
+  height: 90%;
+  text-align: center;
+  top: 5% !important;
+  width: 450px;
+}
+
+#authmodal .modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+}
+
+#authmodal .modal-content .modal-close {
+  color: #5a38ad;
+  font-size: 30px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#authmodal .modal-content .modal-close:hover,
+#authmodal .modal-content .modal-close:active {
+  color: #386bad;
+}
+
+#authmodal .modal-content .instruction {
+  color: #616161;
+  font-size: 16px;
+}
+
+#authmodal .modal-content .logo {
+  margin-bottom: 40px;
+}
+
+#authmodal .modal-content .logo img {
+  max-height: 100px;
+}
+
+#authmodal .modal-content .select-wrapper input.select-dropdown {
+  text-align: center;
+}
+
+#authmodal .modal-content .select-wrapper .dropdown-content {
+  top: 100% !important;
+  width: 100% !important;
+}
+
+#authmodal .modal-content .select-wrapper .dropdown-content li {
+  text-align: center;
+}
+
+#authmodal .modal-content .select-wrapper .dropdown-content li > a,
+#authmodal .modal-content .select-wrapper .dropdown-content li > span {
+  color: #616161;
+}
+
+#authmodal .modal-content .select-wrapper .dropdown-content li.selected {
+  background-color: #5a38ad;
+}
+
+#authmodal .modal-content .select-wrapper .dropdown-content li.selected > a,
+#authmodal .modal-content .select-wrapper .dropdown-content li.selected > span {
+  color: #ffffff;
+}
+
+#authmodal .modal-content input[type="text"],
+#authmodal .modal-content input[type="password"],
+#authmodal .modal-content input[type="email"] {
+  border-radius: 30px;
+  border: 1px solid #cccccc;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#authmodal .modal-content input[type="text"]:focus,
+#authmodal .modal-content input[type="password"]:focus,
+#authmodal .modal-content input[type="email"]:focus {
+  border-color: #5a38ad;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#authmodal .modal-content .button {
+  border-radius: 30px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+#authmodal .modal-content .button.button {
+  padding: 0;
+}
+
+#authmodal .modal-content .button.button input {
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 13px 20px;
+  outline: 0;
+  width: 100%;
+}
+
+#authmodal .modal-content .need-help {
+  margin-top: 40px;
+}
+
+#authmodal .modal-content .error {
+  display: none;
+}
+
+#authmodal .modal-content .error.show {
+  display: block;
+}
+
+#authmodal .modal-content #register-step {
+  color: #616161;
+  display: none;
+}
+
+#authmodal .modal-content #register-step strong {
+  font-weight: bold;
+}
+
+/*Global forms*/
+
+.error {
+  color: red;
+}
+
+/*Global buttons*/
+
+.button {
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  outline: 0;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.button.primary {
+  background-color: #386bad;
+  color: #ffffff;
+}
+
+.button.primary:hover,
+.button.primary:active {
+  background-color: #5a38ad;
+  color: #ffffff;
+}
+
+/*Content container*/
+
+.main-content {
+  padding-top: 65px;
+}
+
+.main-content .title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.main-content .center-content {
+  margin: auto;
+  width: 90%;
+}
+
+.main-content .input-field.col input {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-content .input-field.col input[type="text"],
+.main-content .input-field.col input[type="password"],
+.main-content .input-field.col input[type="email"],
+.main-content .input-field.col input[type="date"] {
+  border: 1px solid #cccccc;
+  border-radius: 35px;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-content .input-field.col label {
+  left: 33px;
+}
+
+.main-content .input-field.col label:not(.label-icon).active {
+  -webkit-transform: translateY(-24px) scale(0.8);
+  transform: translateY(-24px) scale(0.8);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.main-content .input-field.col .select-wrapper + label {
+  top: -34px;
+}
+
+/*Forms*/
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: #386bad;
+}
+

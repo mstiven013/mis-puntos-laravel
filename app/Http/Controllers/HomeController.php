@@ -7,21 +7,15 @@ use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+
+    protected $request;
+
+    public function __construct(Request $request)
     {
         //$this->middleware('auth');
+        $this->request = $request;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('home');
@@ -29,9 +23,9 @@ class HomeController extends Controller
 
     public function register()
     {
-        $document_type = Input::post('document-type');
-        $document = Input::post('document');
+        $document_type = $this->request->get('document-type');
+        $document = $this->request->get('document');
 
-        return view('registro', ['document_type' => $document_type, 'document' => $document]);
+        return view('registro', ['tipo_documento' => $document_type, 'documento' => $document]);
     }
 }

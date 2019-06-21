@@ -1,4 +1,4 @@
-{!! Form::open([ 'method' => 'post', 'action' => 'HomeController@register', 'id' => 'auth-form', 'class' => 'auth-form']) !!}
+{!! Form::open([ 'method' => 'get', 'action' => 'HomeController@register', 'id' => 'auth-form', 'class' => 'auth-form']) !!}
 	<div class="form-group logo">
 		<img src="https://www.webussines.com/wp-content/themes/WeBussines/images/logo.png" alt="">
 	</div>
@@ -46,7 +46,7 @@
 	</div>
 
 	<div id="register-step">
-		<p>Con tu documento <strong id="document-id"></strong>, estás a un paso de pertenecer al programa de puntos que llenará tu vida de nuevas experiencias. Para ello debemos tratar tus datos, tal como te lo informamos a continuación:</p>
+		<p>Con tu documento <strong id="document-id"></strong>, estás a un paso de pertenecer al programa de puntos que llenará tu vida de nuevas experiencias.</p>
 
 		<!--Submit button-->
 		<input class="waves-effect waves-light button primary" type="submit" id="register" value="Comenzar">

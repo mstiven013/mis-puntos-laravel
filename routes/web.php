@@ -17,9 +17,7 @@ Route::get('/', function () {
 });
 
 //Register route
-Route::post('/registro', 'HomeController@register');
+Route::get('/registro', 'HomeController@register');
 
 //Auth::routes();
 Route::get('/cuenta', 'HomeController@index')->name('home');
-
-

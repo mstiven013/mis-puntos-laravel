@@ -5,72 +5,28 @@
 
 <!--Home mockup styles-->
 @section('styles')
-<style>
-    html, body {
-        background-color: #386bad;
-        color: #fff;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .full-height {
-        height: 100vh;
-    }
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .position-ref {
-        position: relative;
-    }
-
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-    }
-
-    .content {
-        text-align: center;
-    }
-
-    .title {
-        color: #fff;
-        font-size: 84px;
-        font-weight: bold;
-    }
-
-    .links > a {
-        color: #fff;
-        padding: 0 25px;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-</style>
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @endsection
 
 <!--Home - content-->
 @section('content')
 
-    <div class="flex-center position-ref full-height">
+    <div class="home-banner">
         <div class="content">
-            <div class="title m-b-md">
+            <h1 class="title">
                 Mis puntos Colombia
-            </div>
+            </h1>
 
             <div class="links">
                 <a href="https://www.webussines.com" target="_blank">By WeBussines</a>
+            </div>
+
+            <div class="seo">
+                <h1>Mis puntos Colombia</h1>
+                <h1>Gestión de puntos Colombia</h1>
+                <h1>Fidelización de clientes</h1>
+                <h1>Puntos Colombia</h1>
+                <h1>Gana Puntos</h1>
             </div>
         </div>
     </div>
